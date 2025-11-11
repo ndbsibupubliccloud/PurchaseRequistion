@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "47183256-1ca972a4-2ac6-4a57-988e-4d67482ac612",
+		"name": "Purchase requisition",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Purchase Requistion Get",
+			"id": "47183256-19cb9583-2406-4c8b-ad14-f6645cce8760",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "fupi8xlLsuRZRmYwBKtUqaorELcnYa<EvKncVidV",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "CPI_COM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://my419475-api.s4hana.cloud.sap/sap/opu/odata4/sap/api_purchaserequisition_2/srvd_a2x/sap/purchaserequisition/0001/PurchaseReqn('10000001')?$expand=_PurchaseRequisitionItem",
+					"protocol": "https",
+					"host": [
+						"my419475-api",
+						"s4hana",
+						"cloud",
+						"sap"
+					],
+					"path": [
+						"sap",
+						"opu",
+						"odata4",
+						"sap",
+						"api_purchaserequisition_2",
+						"srvd_a2x",
+						"sap",
+						"purchaserequisition",
+						"0001",
+						"PurchaseReqn('10000001')"
+					],
+					"query": [
+						{
+							"key": "$expand",
+							"value": "_PurchaseRequisitionItem"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase requisition Post",
+			"id": "47183256-d22dcbf5-bae3-4d02-b31b-0d25f98135e1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "fupi8xlLsuRZRmYwBKtUqaorELcnYa<EvKncVidV",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "CPI_COM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "9PcIAWRSPMW79teQZ4v_IA==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  // \"PurchaseRequisition\": \"string\",\r\n   \"PurchaseRequisitionType\": \"NB\",\r\n   \"PurReqnDescription\": \"Test PR\",\r\n   \"PurReqnHeaderNote\": \"Test PR\",\r\n   \"SourceDetermination\": false,\r\n   \"PurReqnDoOnlyValidation\": false,\r\n   \r\n   \"_PurchaseRequisitionItem\": [\r\n      {\r\n        // \"PurchaseRequisition\": \"string\",\r\n        // \"PurchaseRequisitionItem\": \"string\",\r\n        //  \"PurchasingDocument\": \"4500000005\",\r\n        //  \"PurchasingDocumentItem\": \"10\",\r\n         //\"PurchasingDocumentSubtype\": \"\",\r\n         //\"PurchasingDocumentItemCategory\": \"string\",\r\n         \"PurchaseRequisitionItemText\": \"Test PR\",\r\n         //\"AccountAssignmentCategory\": \"string\",\r\n         \"Material\": \"29\",\r\n         \"MaterialGroup\": \"RAU\",\r\n         \"RequestedQuantity\": 5,\r\n         \"BaseUnit\": \"ST\",\r\n         \"BaseUnitISOCode\": \"PCE\",\r\n         \"PurchaseRequisitionPrice\": 50,\r\n         \"PurReqnPriceQuantity\": 5,\r\n         \"MaterialGoodsReceiptDuration\": 0,\r\n         \"PurchasingOrganization\": \"1000\",\r\n         \"PurchasingGroup\": \"P10\",\r\n         \"Plant\": \"1100\",\r\n         \"CompanyCode\": \"1000\",\r\n         \"SourceOfSupplyIsAssigned\": false,\r\n         //\"SupplyingPlant\": \"string\",\r\n         \"OrderedQuantity\": 5,\r\n         \"DeliveryDate\": \"2025-11-06\",\r\n         \"PurchaseRequisitionReleaseDate\": \"2025-11-06\",\r\n        // \"ProcessingStatus\": \"string\",\r\n        // \"ExternalApprovalStatus\": \"string\",\r\n         \"PurchasingInfoRecord\": \"5300000003\",\r\n         //\"Supplier\": \"string\",\r\n         \"IsDeleted\": false,\r\n         \"FixedSupplier\": \"1100005\",\r\n         //\"RequisitionerName\": \"string\",\r\n         \"PurReqCreationDate\": \"2025-11-06\",\r\n         \"PurReqnItemCurrency\": \"INR\",\r\n         \"MaterialPlannedDeliveryDurn\": 10,\r\n         \"DelivDateCategory\": \"1\",\r\n        //  \"MultipleAcctAssgmtDistribution\": \"string\",\r\n         \"StorageLocation\": \"1153\",\r\n        //  \"PurReqnSSPRequestor\": \"string\",\r\n        //  \"PurReqnSSPAuthor\": \"string\",\r\n        //  \"PurchaseContract\": \"string\",\r\n        //  \"PurReqnSourceOfSupplyType\": \"string\",\r\n        //  \"PurchaseContractItem\": \"string\",\r\n        //  \"ConsumptionPosting\": \"string\",\r\n        //  \"PurReqnOrigin\": \"string\",\r\n        //  \"PurReqnSSPCatalog\": \"string\",\r\n        //  \"PurReqnSSPCatalogItem\": \"string\",\r\n        //  \"PurReqnSSPCrossCatalogItem\": 0,\r\n        //  \"PurReqnItemBlockingStatus\": \"string\",\r\n        //  \"PurReqnItemBlockingReasonText\": \"string\",\r\n         \"Language\": \"EN\",\r\n         \"IsClosed\": true,\r\n        //  \"ServicePerformer\": \"string\",\r\n        //  \"ProductTypeCode\": \"string\",\r\n        //  \"PerformancePeriodStartDate\": \"2017-04-13\",\r\n        //  \"PerformancePeriodEndDate\": \"2017-04-13\",\r\n        //  \"PurchaseOrderPriceType\": \"string\",\r\n        //  \"SupplierMaterialNumber\": \"string\",\r\n        //  \"Batch\": \"string\",\r\n        //  \"MaterialRevisionLevel\": \"string\",\r\n        //  \"MinRemainingShelfLife\": 0,\r\n         \"ItemNetAmount\": 50\r\n        //  \"TaxCode\": \"string\",\r\n        //  \"GoodsReceiptIsExpected\": true,\r\n        //  \"InvoiceIsExpected\": true,\r\n        //  \"GoodsReceiptIsNonValuated\": true,\r\n        //  \"RequirementTracking\": \"string\",\r\n        //  \"MRPController\": \"string\",\r\n        //  \"PurchaseRequisitionIsFixed\": true,\r\n        //  \"ItemDeliveryAddressID\": \"string\",\r\n        //  \"PurReqnReceivingCustomer\": \"string\",\r\n        //  \"Subcontractor\": \"string\",\r\n        //  \"ExpectedOverallLimitAmount\": 0,\r\n        //  \"OverallLimitAmount\": 0,\r\n        //  \"PurContractForOverallLimit\": \"string\",\r\n        //  \"PurContractItemForOverallLimit\": \"string\",\r\n        //  \"PurReqnExternalReference\": \"string\",\r\n        //  \"PurReqnItemExternalReference\": \"string\",\r\n        //  \"PurReqnExternalSystemId\": \"string\",\r\n        //  \"ProcurementHubSourceSystem\": \"string\",\r\n        //  \"SSPAuthorExternalBPIdnNumber\": \"string\",\r\n        //  \"SSPReqrUserId\": \"string\"\r\n      }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my419475-api.s4hana.cloud.sap/sap/opu/odata4/sap/api_purchaserequisition_2/srvd_a2x/sap/purchaserequisition/0001/PurchaseReqn",
+					"protocol": "https",
+					"host": [
+						"my419475-api",
+						"s4hana",
+						"cloud",
+						"sap"
+					],
+					"path": [
+						"sap",
+						"opu",
+						"odata4",
+						"sap",
+						"api_purchaserequisition_2",
+						"srvd_a2x",
+						"sap",
+						"purchaserequisition",
+						"0001",
+						"PurchaseReqn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase Requistion Update",
+			"id": "47183256-89ff5efa-d7e7-42c1-9305-bd7348873802",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "fupi8xlLsuRZRmYwBKtUqaorELcnYa<EvKncVidV",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "CPI_COM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "9PcIAWRSPMW79teQZ4v_IA==",
+						"type": "text"
+					},
+					{
+						"key": "If-Match",
+						"value": "W/\"SADL-202511060656276983870C~20251106065627.6983870\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  // \"PurchaseRequisition\": \"string\",\r\n//    \"PurchaseRequisitionType\": \"NB\",\r\n   \"PurReqnDescription\": \"Testing PR\",\r\n   \"PurReqnHeaderNote\": \"Testing PR\"\r\n//    \"SourceDetermination\": false,\r\n//    \"PurReqnDoOnlyValidation\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my419475-api.s4hana.cloud.sap/sap/opu/odata4/sap/api_purchaserequisition_2/srvd_a2x/sap/purchaserequisition/0001/PurchaseReqn('10000331')",
+					"protocol": "https",
+					"host": [
+						"my419475-api",
+						"s4hana",
+						"cloud",
+						"sap"
+					],
+					"path": [
+						"sap",
+						"opu",
+						"odata4",
+						"sap",
+						"api_purchaserequisition_2",
+						"srvd_a2x",
+						"sap",
+						"purchaserequisition",
+						"0001",
+						"PurchaseReqn('10000331')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase Requistion Item Update",
+			"id": "47183256-e5c2fe22-0d91-4680-91b5-a705d5bef7fb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "fupi8xlLsuRZRmYwBKtUqaorELcnYa<EvKncVidV",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "CPI_COM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "9PcIAWRSPMW79teQZ4v_IA==",
+						"type": "text"
+					},
+					{
+						"key": "If-Match",
+						"value": "W/\"SADL-202511060719390471830C~20251106071939.0471830\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n//    \"PurchasingDocument\": \"string\",\r\n//    \"PurchasingDocumentItem\": \"string\",\r\n//    \"PurchasingDocumentSubtype\": \"string\",\r\n//    \"PurchasingDocumentItemCategory\": \"string\",\r\n   \"PurchaseRequisitionItemText\": \"Testing Pr\",\r\n//    \"AccountAssignmentCategory\": \"string\",\r\n//    \"Material\": \"string\",\r\n//    \"MaterialGroup\": \"string\",\r\n   \"RequestedQuantity\": 2,\r\n   \"BaseUnit\": \"ST\",\r\n   \"BaseUnitISOCode\": \"PCE\"\r\n//    \"PurchaseRequisitionPrice\": 0,\r\n//    \"PurReqnPriceQuantity\": 0,\r\n//    \"MaterialGoodsReceiptDuration\": 0,\r\n//    \"PurchasingOrganization\": \"string\",\r\n//    \"PurchasingGroup\": \"string\",\r\n//    \"Plant\": \"string\",\r\n//    \"CompanyCode\": \"string\",\r\n//    \"SourceOfSupplyIsAssigned\": true,\r\n//    \"SupplyingPlant\": \"string\",\r\n//    \"OrderedQuantity\": 0,\r\n//    \"DeliveryDate\": \"2017-04-13\",\r\n//    \"PurchaseRequisitionReleaseDate\": \"2017-04-13\",\r\n//    \"ProcessingStatus\": \"string\",\r\n//    \"PurchasingInfoRecord\": \"string\",\r\n//    \"Supplier\": \"string\",\r\n//    \"IsDeleted\": true,\r\n//    \"FixedSupplier\": \"string\",\r\n//    \"RequisitionerName\": \"string\",\r\n//    \"PurReqCreationDate\": \"2017-04-13\",\r\n//    \"PurReqnItemCurrency\": \"string\",\r\n//    \"MaterialPlannedDeliveryDurn\": 0,\r\n//    \"DelivDateCategory\": \"string\",\r\n//    \"MultipleAcctAssgmtDistribution\": \"string\",\r\n//    \"StorageLocation\": \"string\",\r\n//    \"PurReqnSSPRequestor\": \"string\",\r\n//    \"PurReqnSSPAuthor\": \"string\",\r\n//    \"PurchaseContract\": \"string\",\r\n//    \"PurReqnSourceOfSupplyType\": \"string\",\r\n//    \"PurchaseContractItem\": \"string\",\r\n//    \"ConsumptionPosting\": \"string\",\r\n//    \"PurReqnOrigin\": \"string\",\r\n//    \"PurReqnSSPCatalog\": \"string\",\r\n//    \"PurReqnSSPCatalogItem\": \"string\",\r\n//    \"PurReqnSSPCrossCatalogItem\": 0,\r\n//    \"PurReqnItemBlockingStatus\": \"string\",\r\n//    \"PurReqnItemBlockingReasonText\": \"string\",\r\n//    \"Language\": \"string\",\r\n//    \"IsClosed\": true,\r\n//    \"ServicePerformer\": \"string\",\r\n//    \"ProductTypeCode\": \"string\",\r\n//    \"PerformancePeriodStartDate\": \"2017-04-13\",\r\n//    \"PerformancePeriodEndDate\": \"2017-04-13\",\r\n//    \"PurchaseOrderPriceType\": \"string\",\r\n//    \"SupplierMaterialNumber\": \"string\",\r\n//    \"Batch\": \"string\",\r\n//    \"MaterialRevisionLevel\": \"string\",\r\n//    \"MinRemainingShelfLife\": 0,\r\n//    \"ItemNetAmount\": 0,\r\n//    \"TaxCode\": \"string\",\r\n//    \"GoodsReceiptIsExpected\": true,\r\n//    \"InvoiceIsExpected\": true,\r\n//    \"GoodsReceiptIsNonValuated\": true,\r\n//    \"RequirementTracking\": \"string\",\r\n//    \"MRPController\": \"string\",\r\n//    \"PurchaseRequisitionIsFixed\": true,\r\n//    \"ItemDeliveryAddressID\": \"string\",\r\n//    \"PurReqnReceivingCustomer\": \"string\",\r\n//    \"Subcontractor\": \"string\",\r\n//    \"ExpectedOverallLimitAmount\": 0,\r\n//    \"OverallLimitAmount\": 0,\r\n//    \"PurContractForOverallLimit\": \"string\",\r\n//    \"PurContractItemForOverallLimit\": \"string\",\r\n//    \"PurReqnExternalReference\": \"string\",\r\n//    \"PurReqnItemExternalReference\": \"string\",\r\n//    \"PurReqnExternalSystemId\": \"string\",\r\n//    \"ProcurementHubSourceSystem\": \"string\",\r\n//    \"SSPAuthorExternalBPIdnNumber\": \"string\",\r\n//    \"SSPReqrUserId\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my419475-api.s4hana.cloud.sap/sap/opu/odata4/sap/api_purchaserequisition_2/srvd_a2x/sap/purchaserequisition/0001/PurchaseReqnItem/10000331/10",
+					"protocol": "https",
+					"host": [
+						"my419475-api",
+						"s4hana",
+						"cloud",
+						"sap"
+					],
+					"path": [
+						"sap",
+						"opu",
+						"odata4",
+						"sap",
+						"api_purchaserequisition_2",
+						"srvd_a2x",
+						"sap",
+						"purchaserequisition",
+						"0001",
+						"PurchaseReqnItem",
+						"10000331",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
